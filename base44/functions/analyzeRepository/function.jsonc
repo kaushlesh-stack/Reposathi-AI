@@ -1,0 +1,4 @@
+{
+  "name": "analyzeRepository",
+  "entry": "entry.ts"
+}
