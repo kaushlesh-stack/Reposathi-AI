@@ -1,0 +1,66 @@
+{
+  "name": "TestRun",
+  "type": "object",
+  "properties": {
+    "repository_id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "pasted_output"
+      ],
+      "default": "pasted_output"
+    },
+    "raw_output": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "total": {
+      "type": "number"
+    },
+    "passed": {
+      "type": "number"
+    },
+    "failed": {
+      "type": "number"
+    },
+    "counts_detected": {
+      "type": "boolean"
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "suggested_fixes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "detail": {
+            "type": "string"
+          },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "referenced_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "repository_id"
+  ]
+}

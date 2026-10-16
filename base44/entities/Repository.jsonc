@@ -1,0 +1,132 @@
+{
+  "name": "Repository",
+  "type": "object",
+  "properties": {
+    "repo_url": {
+      "type": "string",
+      "description": "Canonical GitHub URL that was analysed"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "default_branch": {
+      "type": "string"
+    },
+    "primary_language": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "percent": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "stars": {
+      "type": "number"
+    },
+    "forks": {
+      "type": "number"
+    },
+    "open_issues": {
+      "type": "number"
+    },
+    "license": {
+      "type": "string"
+    },
+    "homepage": {
+      "type": "string"
+    },
+    "topics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pushed_at": {
+      "type": "string"
+    },
+    "total_files": {
+      "type": "number"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "size": {
+            "type": "number"
+          },
+          "lang": {
+            "type": "string"
+          },
+          "text": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "entry_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "config_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependency_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "readme_excerpt": {
+      "type": "string"
+    },
+    "analysis_status": {
+      "type": "string",
+      "enum": [
+        "analyzed",
+        "partial",
+        "failed"
+      ]
+    },
+    "tree_truncated": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "repo_url",
+    "owner",
+    "repo"
+  ]
+}

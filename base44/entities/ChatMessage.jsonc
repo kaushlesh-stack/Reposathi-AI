@@ -1,0 +1,58 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "repository_id": {
+      "type": "string",
+      "description": "Repository record this message belongs to"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "user",
+        "assistant"
+      ]
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "chat",
+        "explanation",
+        "search"
+      ],
+      "default": "chat"
+    },
+    "content": {
+      "type": "string"
+    },
+    "file_path": {
+      "type": "string",
+      "description": "File the message is about, if any"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "lines": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "failed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "repository_id",
+    "role",
+    "content"
+  ]
+}
